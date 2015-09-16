@@ -14,6 +14,12 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO 自動生成されたメソッド・スタブ
+		super.onResume();
 
 		Button btn_kouza = (Button)findViewById(R.id.buttonKouza);
 		Button btn_quiz = (Button)findViewById(R.id.buttonQuiz);
