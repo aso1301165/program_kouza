@@ -5,15 +5,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 
-public class MainActivity extends Activity {
+public class NewPasswordActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_new_password);
+
+		Intent intent = getIntent();
+		String nu = intent.getStringExtra("name");
+
+		EditText pass = (EditText)findViewById(R.id.TextPassword);
+		pass.setText(nu);
 	}
 
 	@Override
@@ -21,24 +26,12 @@ public class MainActivity extends Activity {
 		// TODO 自動生成されたメソッド・スタブ
 		super.onResume();
 
-		Button btn_kouza = (Button)findViewById(R.id.buttonKouza);
-		Button btn_quiz = (Button)findViewById(R.id.buttonQuiz);
-
-		btn_quiz.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO 自動生成されたメソッド・スタブ
-				Intent intent = new Intent(MainActivity.this, NewAccountActivity.class);
-				startActivity(intent);
-			}
-		});
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.new_password, menu);
 		return true;
 	}
 

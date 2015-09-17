@@ -30,6 +30,10 @@
             android:name=".NewAccountActivity"
             android:label="@string/title_activity_new_account" >
         </activity>
+        <activity
+            android:name=".NewPasswordActivity"
+            android:label="@string/title_activity_new_password" >
+        </activity>
     </application>
 
 </manifest>
